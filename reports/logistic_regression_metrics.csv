@@ -1,0 +1,19 @@
+import os
+
+os.makedirs("reports", exist_ok=True)
+
+metrics = pd.DataFrame({
+    "Model": ["Logistic Regression"],
+    "Accuracy": [accuracy],
+    "Precision": [precision],
+    "Recall": [recall],
+    "F1": [f1],
+    "ROC-AUC": [roc_auc]
+})
+
+metrics.to_csv(
+    "reports/logistic_regression_metrics.csv",
+    index=False
+)
+
+print("Metrics saved to reports/logistic_regression_metrics.csv")
