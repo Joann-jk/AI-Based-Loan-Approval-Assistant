@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react';
 import { AlertTriangle, RefreshCw, ShieldCheck } from 'lucide-react';
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
-import USAMapModule from 'react-usa-map';
+import USAMap from '../components/USAMap';
 import PageHeader from '../components/PageHeader';
 import { fetchFairness } from '../services/api';
-
-const USAMap = USAMapModule.default || USAMapModule;
 
 const percent = value => `${(value * 100).toFixed(1)}%`;
 const tooltipFormatter = value => [percent(value), 'Rate'];
